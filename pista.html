@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dos imágenes lado a lado</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    h1 { font-size: 1.4rem; margin-bottom: 16px; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    figure {
+      margin: 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f7f7f7;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    figcaption {
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      background: #fff;
+      border-top: 1px solid #ddd;
+    }
+    .label {
+      font-weight: bold;
+      margin-right: 6px;
+    }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Dos imágenes lado a lado</h1>
+
+    <div class="grid">
+      <figure>
+        <!-- Reemplaza left.png por tu archivo/URL -->
+        <img src="adriatic.png" alt="Imagen izquierda" />
+        <figcaption>
+          <span class="label">Izquierda:</span>
+          Esta es la imagen de la izquierda.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <!-- Reemplaza right.png por tu archivo/URL -->
+        <img src="pozo.png" alt="Imagen derecha" />
+        <figcaption>
+          <span class="label">Derecha:</span>
+          Esta es la imagen de la derecha.
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+</body>
+</html>
